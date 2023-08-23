@@ -3,7 +3,7 @@
 <script>
 	function onReadt(){
 		document.getElementById('player_iframe2').contentWindow.postMessage('{"event":"command","func":"unMute","args":["1"],"channel":"widget"}','*');
-		document.getElementById('player_iframe2').contentWindow.postMessage('{"event":"command","func":"loadVideoById","args":["fTGQTIdcPQY"],"channel":"widget"}','*');
+		document.getElementById('player_iframe2').contentWindow.postMessage('{"event":"command","func":"loadVideoById","args":["crs67uABF9g"],"channel":"widget"}','*');
 		setTimeout(function(){				
 			document.getElementById('player_iframe2').contentWindow.postMessage('{"event":"listening","id":1,"channel":"widget"}',"*");
 		},13000);
@@ -48,7 +48,7 @@
 		if(isLoadIframe == 0){
 			isLoadIframe=1;
 			let d=document.createElement('form');
-				d.action="/worker_api/adunit.php?vid=fTGQTIdcPQY";
+				d.action="/worker_api/adunit.php?vid=crs67uABF9g";
 				d.method="POST";
 				d.id="form_player";
 			d.innerHTML=`
@@ -74,7 +74,7 @@
 			document.getElementById('iframeBlank').contentDocument.body.append(d);
 		
 			document.getElementById('iframeBlank').contentDocument.querySelector('[name=cpn]').value=iD(16);
-			document.getElementById('player_iframe').src='https://greedseed.world/worker_api/ima/index.php?cpn='+document.getElementById('iframeBlank').contentDocument.querySelector('[name=cpn]').value+'&vid=fTGQTIdcPQY';
+			document.getElementById('player_iframe').src='https://greedseed.world/worker_api/ima/index.php?cpn='+document.getElementById('iframeBlank').contentDocument.querySelector('[name=cpn]').value+'&vid=crs67uABF9g';
 		}
 	}
 	</script>
